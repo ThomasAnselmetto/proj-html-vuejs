@@ -6,3 +6,41 @@
   --deep-green: #2d4649;
   --master-study-yellow: #fcb900;
 }
+
+/* reset */
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  color: var(--high-contrast-grey);
+}
+
+/* debug */
+section {
+  height: 50rem;
+}
+
+/* HEADER CON LA SUA NAV */
+.main-header {
+  height: 10rem;
+  line-height: 8rem;
+}
+.navbar-nav > .nav-link {
+  margin: 0 1rem;
+  font-weight: bolder;
+}
+.socials {
+  width: 100px;
+}
+
+.jumbotron {
+  background-color: var(--deep-green);
+}
