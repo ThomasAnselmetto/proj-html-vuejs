@@ -6,7 +6,9 @@
   --deep-green: #2d4649;
   --master-study-yellow: #fcb900;
 }
-
+.white-words {
+  color: var(--basic-white);
+}
 /* reset */
 img {
   max-width: 100%;
@@ -28,10 +30,17 @@ section {
   height: 50rem;
 }
 
+.jumbotron-container {
+  background-color: var(--master-study-yellow);
+  height: 10rem;
+  width: 1400px;
+  margin: 0 auto;
+}
+
 /* HEADER CON LA SUA NAV */
 .main-header {
-  height: 10rem;
-  line-height: 8rem;
+  height: 8rem;
+  line-height: 6rem;
 }
 .navbar-nav > .nav-link {
   margin: 0 1rem;
@@ -40,7 +49,20 @@ section {
 .socials {
   width: 100px;
 }
+/* JUMBOTRON & EMAIL INPUT */
 
 .jumbotron {
   background-color: var(--deep-green);
+}
+
+.subscribe {
+  width: 50%;
+  height: 100%;
+  background-color: var(--low-contrast-grey);
+}
+
+.countdown {
+  width: 50%;
+  height: 100%;
+  background-color: var(--basic-white);
 }
