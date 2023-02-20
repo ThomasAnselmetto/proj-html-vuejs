@@ -9,6 +9,9 @@
 .white-words {
   color: var(--basic-white);
 }
+.yellow-words {
+  color: var(--master-study-yellow);
+}
 /* reset */
 img {
   max-width: 100%;
@@ -30,13 +33,6 @@ section {
   height: 50rem;
 }
 
-.jumbotron-container {
-  background-color: var(--master-study-yellow);
-  height: 10rem;
-  width: 1400px;
-  margin: 0 auto;
-}
-
 /* HEADER CON LA SUA NAV */
 .main-header {
   height: 8rem;
@@ -52,17 +48,68 @@ section {
 /* JUMBOTRON & EMAIL INPUT */
 
 .jumbotron {
-  background-color: var(--deep-green);
+  background-image: url(../IMG/slide-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.jumbotron-container {
+  position: relative;
+  width: 1370px;
+  margin: 0 auto;
+}
+.jumbotron-title {
+  width: 40%;
+  position: absolute;
+  top: 13rem;
+  right: 13rem;
+}
+.jumbotron-input {
+  height: 13rem;
+  width: 90%;
+  background-color: var(--master-study-yellow);
+  border-radius: 10px;
+  position: absolute;
+  top: 42rem;
+  left: 4rem;
+}
+.jumbotron-title > h1 {
+  font-size: 4rem;
 }
 
 .subscribe {
   width: 50%;
-  height: 100%;
-  background-color: var(--low-contrast-grey);
+  margin: 1rem 0 0 3rem;
 }
 
 .countdown {
   width: 50%;
-  height: 100%;
-  background-color: var(--basic-white);
+}
+
+.email-form {
+  width: 100%;
+  position: relative;
+}
+
+.mail-input {
+  width: 70%;
+
+  height: 3rem;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding-left: 1.5rem;
+}
+
+.button {
+  height: 3rem;
+  border: 1px solid transparent;
+  border-radius: 25px;
+}
+
+.button.btn-subscribe {
+  width: 17%;
+  background-color: var(--deep-green);
+  color: var(--basic-white);
+  position: absolute;
+  right: 11rem;
 }
