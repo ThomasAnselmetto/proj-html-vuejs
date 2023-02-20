@@ -20,6 +20,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- BOOTSTRAP -->
     <link
@@ -86,16 +93,19 @@
 
       <section class="jumbotron">
         <div class="jumbotron-container">
+          <!-- TITOLO DEL JUMBOTRON IN POSIZIONE ABSOLUTE -->
           <div class="jumbotron-title">
             <h1>
               Start your Human
               <span class="yellow-words">Revolution </span>today
             </h1>
-            <p>
+            <p class="mt-4 p-size1">
               A wonderful serenity has taken possession of my entire soul, like
               these sweet mornings of spring which i enjoy with my whole heart.
             </p>
           </div>
+          <!-- FORM PER L'ISCRIZIONE IN POSIZIONE ABSOLUTE -->
+
           <div class="jumbotron-input d-flex justify-content-between">
             <div class="subscribe d-flex flex-wrap">
               <h3 class="mt-4">
@@ -114,8 +124,9 @@
               </form>
             </div>
             <div
-              class="countdown d-flex align-items-center justify-content-evenly"
+              class="countdown d-flex align-items-center justify-content-evenly text-center"
             >
+              <!-- UTILIZZARE UN TIMER CON JS  -->
               <div class="days">
                 <h2>26</h2>
                 <h4>Days</h4>
@@ -136,10 +147,214 @@
           </div>
         </div>
       </section>
+      <!-- FOUNDER INTRODUCTION -->
+      <!-- BOOTSTRAP FACILITA CON IL PROCESSO CONTAINER-ROW-COL -->
 
-      <section class="founder-introdunction"></section>
-      <section class="new-courses"></section>
+      <section class="founder-introdunction">
+        <div class="container founder-intro">
+          <div class="row">
+            <!-- DIVISIONE DALLA ROW IN DUE COLONNE -->
+            <div class="col-4 greeting pt-4 px-3">
+              <h2 class="fw-bold">
+                Hey there,my name is John Doe.I'm the founder of the Brain
+                Academy.
+              </h2>
+              <div class="img-container d-flex justify-content-center mt-4">
+                <img src="./IMG/sign.jpg" alt="founder-sign" />
+              </div>
+            </div>
+            <div class="col-8 story pt-4">
+              <p>
+                A wonderful serenity has taken possession of my entire soul,
+                like these sweet mornings of spring which i enjoy with my whole
+                heart.I am alone, and feel the charm of existence in this spot,
+                which was created for the bliss of souls like mine. I am so
+                happy, my dear friend, so absorbed in the exquisite sense of
+                mere tranquil existence, that I negleth my talent. When, while
+                the lovely valley teems with vapour around me, and the meridian
+                sun strikes the upper surface of the impenetrable foliage of my
+                trees, and but a few stray gleams steal into the inner sanctuary
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW COURSES -->
+      <!-- STRUTTURA CONTAINER ROW COL CARD(BOOTSTRAP) -->
+      <section class="new-courses">
+        <div class="container text-center">
+          <h2 class="new-courses-title fw-bold fs-1 m-5">New Courses</h2>
+          <div class="row g-5">
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="./IMG/photo-1496307042754-b4aa456c4a2d-370x200.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body text-center">
+                  <h4 class="card-text fw-bold">
+                    How to be a DJ? Make Electronic Music
+                  </h4>
+                  <p class="activity border-bottom pb-4">Electronic</p>
+                  <ul class="insight d-flex justify-content-between">
+                    <li>
+                      <a href="#"><i class="fa-solid fa-signal"></i>Advanced</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-list"></i>8 Lectures</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-regular fa-clock"></i>6 Hours</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="./IMG/12345-1-370x200.png"
+                  class="card-img-top"
+                  alt="nvidia-img"
+                />
+                <div class="card-body text-center">
+                  <h4 class="card-text fw-bold">
+                    Nvidia and UE4 Technologies Practice
+                  </h4>
+                  <p class="activity border-bottom pb-4">Nvidia</p>
+                  <ul class="insight d-flex justify-content-between">
+                    <li>
+                      <a href="#"><i class="fa-solid fa-signal"></i>Advanced</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-list"></i>8 Lectures</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-regular fa-clock"></i>6 Hours</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="./IMG/photo-1491897554428-130a60dd4757-370x200.jpeg"
+                  class="card-img-top"
+                  alt="fashion-photography"
+                />
+                <div class="card-body text-center">
+                  <h4 class="card-text fw-bold">
+                    Fashion Photography from professional
+                  </h4>
+                  <p class="activity border-bottom pb-4">Fashion</p>
+                  <ul class="insight d-flex justify-content-between">
+                    <li>
+                      <a href="#"><i class="fa-solid fa-signal"></i>Advanced</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-list"></i>6 Lectures</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-regular fa-clock"></i>6 Hours</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="./IMG/photo-1416339134316-0e91dc9ded92-370x200.jpeg"
+                  class="card-img-top"
+                  alt="comunication-img"
+                />
+                <div class="card-body text-center">
+                  <h4 class="card-text fw-bold">
+                    Design Instruments for Communication
+                  </h4>
+                  <p class="activity border-bottom pb-4">Communication</p>
+                  <ul class="insight d-flex justify-content-between">
+                    <li>
+                      <a href="#"
+                        ><i class="fa-solid fa-signal"></i>Intermediate</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-list"></i>6 Lectures</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-regular fa-clock"></i>6 Hours</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="./IMG/cathryn-lavery-67852-unsplash-370x200.jpg"
+                  class="card-img-top"
+                  alt="art-img"
+                />
+                <div class="card-body text-center">
+                  <h4 class="card-text fw-bold">
+                    Make your Concept Right and Beautiful
+                  </h4>
+                  <p class="activity border-bottom pb-4">Art</p>
+                  <ul class="insight d-flex justify-content-between">
+                    <li>
+                      <a href="#"
+                        ><i class="fa-solid fa-signal"></i>Intermediate</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-list"></i>6 Lectures</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-regular fa-clock"></i>6 Hours</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="./IMG/photo-1475452779376-caebfb988090-370x200.jpeg"
+                  class="card-img-top"
+                  alt="bicycling-img"
+                />
+                <div class="card-body text-center">
+                  <h4 class="card-text fw-bold">
+                    Road Bike Manual or How to Be a Champion
+                  </h4>
+                  <p class="activity border-bottom pb-4">Bicycling</p>
+                  <ul class="insight d-flex justify-content-between">
+                    <li>
+                      <a href="#"><i class="fa-solid fa-signal"></i>Beginner</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-list"></i>6 Lectures</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-regular fa-clock"></i>6 Hours</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button btn-more fw-bold mt-5" type="button">
+            LOAD MORE
+          </button>
+        </div>
+      </section>
+
       <section class="template-book"></section>
+
       <section class="why-us"></section>
       <section class="course statistics"></section>
       <section class="students-opinion"></section>
