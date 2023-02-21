@@ -47,6 +47,9 @@ a {
   font-size: 25px;
 }
 .p-size3 {
+  font-size: 35px;
+}
+.p-size4 {
   font-size: 50px;
 }
 body {
@@ -199,4 +202,14 @@ li > a > i {
 }
 .courses-icons {
   border-left: 7px solid var(--master-study-yellow);
+}
+/* COURSE-STATISTICS */
+.counter {
+  height: 30rem;
+  background-image: url(../IMG/counter-1919x1101.jpg);
+  background-size: cover;
+  background-position: top;
+}
+.counter-container {
+  padding-top: 10rem;
 }
