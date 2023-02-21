@@ -41,7 +41,7 @@ a {
 }
 /* FONTS */
 .p-size1 {
-  font-size: 18px;
+  font-size: 20px;
 }
 .p-size2 {
   font-size: 25px;
@@ -51,6 +51,9 @@ a {
 }
 .p-size4 {
   font-size: 50px;
+}
+.p-text-main {
+  line-height: 1.8;
 }
 body {
   font-family: "Roboto Slab", serif;
@@ -212,4 +215,19 @@ li > a > i {
 }
 .counter-container {
   padding-top: 10rem;
+}
+/* STUDENTS OPINION */
+
+.students-img > img {
+  border-radius: 50%;
+  height: 7rem;
+}
+.students-img > .left-img {
+  height: 5rem;
+}
+.students-img > .right-img {
+  height: 5rem;
+}
+.students-container {
+  line-height: 10;
 }
