@@ -181,8 +181,8 @@ li > a > i {
 }
 
 .button.btn-more {
-  background-color: var(--master-study-yellow);
-  color: var(--basic-white);
+  color: var(--master-study-yellow);
+  border: 3px solid var(--master-study-yellow);
   font-size: small;
   padding: 10px 23px;
   border-radius: 18px;
@@ -270,4 +270,21 @@ li > a > i {
   top: 1rem;
   right: 1rem;
   background-color: var(--master-study-yellow);
+}
+.button.btn-more:hover {
+  cursor: pointer;
+  border: 3px solid transparent;
+  background-color: var(--master-study-yellow);
+  color: var(--basic-white);
+}
+.courses-card:hover {
+  cursor: pointer;
+  background-color: var(--master-study-yellow);
+  border: 10px solid var(--high-contrast-grey);
+}
+.courses-card:hover > .courses-icons > i {
+  color: var(--basic-white);
+}
+.courses-card:hover > .text > p {
+  color: black;
 }
