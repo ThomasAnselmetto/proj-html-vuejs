@@ -14,6 +14,9 @@
 .yellow-words {
   color: var(--master-study-yellow);
 }
+.h-contrast-grey {
+  color: var(--high-contrast-grey);
+}
 /* DEBUG */
 .debug1 {
   background-color: aqua;
