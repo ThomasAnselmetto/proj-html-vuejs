@@ -37,9 +37,11 @@ a {
   color: inherit;
 }
 /* FONTS */
-
+.p-size02 {
+  font-size: 12px;
+}
 .p-size05 {
-  font-size: 16px;
+  font-size: 15px;
 }
 .p-size1 {
   font-size: 20px;
@@ -241,4 +243,31 @@ li > a > i {
 .menu-item {
   list-style: disc;
   margin-left: 1.5rem;
+}
+
+/* FILTERS,HOVER and position*/
+
+.img-utility-container {
+  position: relative;
+}
+.img-utility-container:hover > img {
+  filter: brightness(0.3);
+}
+.img-utility-container:hover .price {
+  display: block;
+}
+.price {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.special {
+  width: 4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--master-study-yellow);
 }
