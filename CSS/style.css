@@ -231,3 +231,13 @@ li > a > i {
 .students-container {
   line-height: 10;
 }
+
+/* FOOTER */
+.footer.about-us {
+  background-color: var(--master-study-yellow);
+  height: 30rem;
+}
+.menu-item {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
