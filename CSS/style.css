@@ -75,7 +75,7 @@ body {
   font-weight: bolder;
 }
 .socials {
-  width: 100px;
+  width: 30px;
 }
 /* JUMBOTRON & EMAIL INPUT */
 
@@ -206,9 +206,7 @@ li > a > i {
 }
 
 /* WHY MY COURSES */
-.courses-card {
-  box-shadow: 30px 10px 40px var(--lower-contrast-grey);
-}
+
 .courses-icons {
   border-left: 7px solid var(--master-study-yellow);
 }
@@ -241,7 +239,7 @@ li > a > i {
 /* FOOTER */
 .footer.about-us {
   background-color: var(--master-study-yellow);
-  height: 30rem;
+  height: 25rem;
 }
 .menu-item {
   list-style: disc;
@@ -283,11 +281,26 @@ li > a > i {
 .courses-card:hover {
   cursor: pointer;
   background-color: var(--master-study-yellow);
-  border: 10px solid var(--high-contrast-grey);
+  border: 10px solid var(--basic-white);
 }
 .courses-card:hover > .courses-icons > i {
   color: var(--basic-white);
 }
 .courses-card:hover > .text > p {
   color: black;
+}
+.menu-item:hover {
+  cursor: pointer;
+  color: var(--basic-white);
+}
+.button.btn-subscribe:active {
+  width: 18%;
+  height: 3rem;
+  background-color: var(--master-study-yellow);
+  color: var(--deep-green);
+  position: absolute;
+  right: 6rem;
+  font-size: small;
+  border: 3px solid var(--deep-green);
+  font-weight: bold;
 }

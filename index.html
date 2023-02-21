@@ -39,7 +39,8 @@
     <link rel="stylesheet" href="./CSS/style.css" />
 
     <!-- VUE JS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script>
 
     <!-- APP JS -->
     <script type="text/javascript" src="./JS/app.js" defer></script>
@@ -53,7 +54,7 @@
         <nav class="navbar navbar-expand-lg bg-white container">
           <div class="container">
             <a class="navbar-brand" href="#"
-              ><img src="./IMG/MasterStudy-1.svg" alt="master-study-logo"
+              ><img :src="links[0].logo" alt="master-study-logo"
             /></a>
 
             <div
@@ -62,35 +63,22 @@
             >
               <div class="navbar-nav me-5 g-3">
                 <a
+                  v-for="(link,linkIndex) in links"
                   class="nav-link h-contrast-grey p-size1"
                   aria-current="page"
                   href="#"
-                  >Courses</a
+                  >{{link.text}}</a
                 >
-                <a class="nav-link h-contrast-grey p-size1" href="#"
-                  >Course Formats</a
-                >
-                <a class="nav-link h-contrast-grey p-size1" href="#"
-                  >Add Course</a
-                >
-                <a class="nav-link h-contrast-grey p-size1" href="#">Pages</a>
-                <a class="nav-link h-contrast-grey p-size1" href="#">Demos</a>
               </div>
 
               <!-- SOCIAL LINKS -->
 
-              <div class="socials d-flex justify-content-between">
+              <div
+                v-for="social in socials"
+                class="socials d-flex justify-content-between"
+              >
                 <a class="nav-link h-contrast-grey p-size1" href="#"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-                <a class="nav-link h-contrast-grey p-size1" href="#"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-                <a class="nav-link h-contrast-grey p-size1" href="#"
-                  ><i class="fa-brands fa-facebook"></i
-                ></a>
-                <a class="nav-link h-contrast-grey p-size1" href="#"
-                  ><i class="fa-brands fa-twitter"></i
+                  ><i :class="social.logo"></i
                 ></a>
               </div>
             </div>
@@ -399,8 +387,11 @@
                   vitae pellentesque urna elementum cursus.</em
                 >
               </p>
-              <img src="./IMG/amazon.png" alt="amazon-img" />
+              <a href="#">
+                <img src="./IMG/amazon.png" alt="amazon-img" />
+              </a>
             </div>
+
             <div class="col mt-5">
               <img src="./IMG/book.png" alt="book-img" />
             </div>
@@ -517,7 +508,7 @@
       </section>
       <!-- STUDENTS OPINION -->
       <section class="students-opinion">
-        <div class="container">
+        <div class="container mb-5">
           <div class="row">
             <div class="col-6 offset-3 text-center">
               <h2 class="new-courses-title fw-bold p-size4 mt-5">
@@ -588,13 +579,13 @@
               </p>
               <div class="socials d-flex">
                 <a class="nav-link" href="#"
-                  ><i class="fa-brands fa-facebook p-size1"></i
+                  ><i class="ms-2 p-size1" :class="socials[2].logo"></i
                 ></a>
                 <a class="nav-link" href="#"
-                  ><i class="fa-brands fa-twitter ms-2 p-size1"></i
+                  ><i class="ms-2 p-size1" :class="socials[3].logo"></i
                 ></a>
                 <a class="nav-link" href="#"
-                  ><i class="fa-brands fa-instagram ms-2 p-size1"></i
+                  ><i class="ms-2 p-size1" :class="socials[1].logo"></i
                 ></a>
               </div>
             </div>
@@ -610,34 +601,9 @@
             <div class="col-3 pages">
               <h3 class="fw-bold p-size2 my-4">PAGES</h3>
               <div class="row">
-                <div class="col-6 d-flex">
+                <div v-for="(item,itemIndex) in items" class="col-6 d-flex">
                   <ul class="footer-menu">
-                    <li class="menu-item">Blog</li>
-                  </ul>
-                </div>
-                <div class="col-6 d-flex">
-                  <ul class="footer-menu">
-                    <li class="menu-item">Home</li>
-                  </ul>
-                </div>
-                <div class="col-6 d-flex">
-                  <ul class="footer-menu">
-                    <li class="menu-item">Shortcodes</li>
-                  </ul>
-                </div>
-                <div class="col-6 d-flex">
-                  <ul class="footer-menu">
-                    <li class="menu-item">Courses</li>
-                  </ul>
-                </div>
-                <div class="col-6 d-flex">
-                  <ul class="footer-menu">
-                    <li class="menu-item">Membership</li>
-                  </ul>
-                </div>
-                <div class="col-6 d-flex">
-                  <ul class="footer-menu">
-                    <li class="menu-item">Typography</li>
+                    <li class="menu-item">{{item.text}}</li>
                   </ul>
                 </div>
               </div>
