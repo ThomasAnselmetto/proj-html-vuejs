@@ -64,7 +64,7 @@
               <div class="navbar-nav me-5 g-3">
                 <a
                   v-for="(link,linkIndex) in links"
-                  class="nav-link h-contrast-grey p-size1"
+                  class="nav-link p-size1"
                   aria-current="page"
                   href="#"
                   >{{link.text}}</a
@@ -112,10 +112,15 @@
               <form class="email-form mb-3" action="">
                 <input
                   class="mail-input"
-                  type="text"
+                  type="email"
                   placeholder="Enter your E-mail"
+                  required
                 />
-                <button class="button btn-subscribe px-1" type="button">
+                <button
+                  @click="sendEmail()"
+                  class="button btn-subscribe px-1"
+                  type="button"
+                >
                   SUBSCRIBE
                 </button>
               </form>

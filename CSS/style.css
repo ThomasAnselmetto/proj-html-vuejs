@@ -304,3 +304,7 @@ li > a > i {
   border: 3px solid var(--deep-green);
   font-weight: bold;
 }
+
+.active-link {
+  color: var(--master-study-yellow);
+}

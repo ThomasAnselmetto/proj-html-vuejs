@@ -52,30 +52,36 @@ const app = createApp({
           name: "Linkedin",
           logo: "fa-brands fa-linkedin",
           CEO: "Ryan Roslansky",
+          href: "https://it.linkedin.com/",
         },
         {
           name: "Instagram",
           logo: "fa-brands fa-instagram",
           CEO: "Kevin Systrom",
+          href: "https://www.instagram.com/",
         },
         {
           name: "Facebook",
           logo: "fa-brands fa-facebook",
           CEO: "Mark Zuckerberg",
+          href: "https://it-it.facebook.com/",
         },
         {
           name: "Twitter",
           logo: "fa-brands fa-twitter",
           CEO: "Elon Musk",
+          href: "https://twitter.com/?lang=it",
         },
       ],
+      emails: [],
+      activeLink: 0,
     };
   },
-  // computed:{
 
-  // }
-  // methods:{
-
-  // },
+  methods: {
+    sendEmail() {
+      alert("messaggio inviato");
+    },
+  },
 });
 app.mount("#app");
