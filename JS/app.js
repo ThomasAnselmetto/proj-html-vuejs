@@ -124,6 +124,7 @@ const app = createApp({
         {
           name: "CONTACT",
           address: "https://mathoverflow.net/",
+          mail: "Info@masterstudy.com",
         },
         {
           name: "PAGES",
