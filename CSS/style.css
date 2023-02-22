@@ -316,3 +316,9 @@ li > a > i {
 .active-link {
   color: var(--master-study-yellow);
 }
+a:hover {
+  color: var(--lower-contrast-grey);
+}
+.aside-menu > a:hover {
+  color: var(--master-study-yellow);
+}

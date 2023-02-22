@@ -108,7 +108,7 @@ const app = createApp({
         },
         {
           name: "cart",
-          classe: "fa-regular fa-cart-shopping",
+          classe: "fa-solid fa-cart-shopping",
           funzione: "rimanda alla sezione acquista",
         },
         {

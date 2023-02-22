@@ -43,6 +43,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script>
 
     <!-- APP JS -->
+    <script type="text/javascript" src="./JS/count.js" defer></script></script>
     <script type="text/javascript" src="./JS/app.js" defer></script>
   </head>
 
@@ -131,20 +132,20 @@
             >
               <!-- UTILIZZARE UN TIMER CON JS  -->
               <div class="days">
-                <h2>26</h2>
-                <h4>Days</h4>
+                <h2 id="days"></h2>
+                <h4 class="fw-bold">Days</h4>
               </div>
               <div class="hours">
-                <h2>01</h2>
-                <h4>Hours</h4>
+                <h2 id="hours"></h2>
+                <h4 class="fw-bold">Hours</h4>
               </div>
               <div class="minutes">
-                <h2>47</h2>
-                <h4>Minutes</h4>
+                <h2 id="minutes"></h2>
+                <h4 class="fw-bold">Minutes</h4>
               </div>
               <div class="seconds">
-                <h2>34</h2>
-                <h4>Seconds</h4>
+                <h2 id="seconds"></h2>
+                <h4 class="fw-bold">Seconds</h4>
               </div>
             </div>
           </div>
@@ -381,9 +382,9 @@
       </section>
       <!-- TEMPLATE BOOK -->
       <section class="template-book">
-        <div class="aside-menu d-flex flex-column p-3">
+        <div class="aside-menu d-flex flex-column p-3 text-center">
           <a v-for="icon in icons" href="#"
-            ><i :class="icon.classe" class="p-size1 mb-3"></i
+            ><i :class="icon.classe" class="p-size1 my-2"></i
           ></a>
         </div>
         <div class="container">
@@ -639,7 +640,9 @@
                         <a :href="blog.address"
                           ><div class="fw-bold p-size1">{{blog.title}}</div></a
                         >
-                        <div class="activity p-size05">-August 9, 2018</div>
+                        <div class="activity p-size05 fw-lighter">
+                          -August 9, 2018
+                        </div>
                       </div>
                     </div>
                   </div>
