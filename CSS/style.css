@@ -92,10 +92,10 @@ body {
   margin: 0 auto;
 }
 .jumbotron-title {
-  width: 42%;
+  width: 47%;
   position: absolute;
-  top: 13rem;
-  right: 12rem;
+  top: 12rem;
+  right: 8rem;
 }
 .jumbotron-input {
   height: 13rem;
@@ -188,7 +188,7 @@ li > a > i {
   border: 3px solid var(--master-study-yellow);
   font-size: small;
   padding: 10px 23px;
-  border-radius: 18px;
+  border-radius: 20px;
 }
 /* TEMPLATE BOOK */
 
