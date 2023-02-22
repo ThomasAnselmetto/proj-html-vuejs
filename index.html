@@ -53,7 +53,7 @@
 
         <nav class="navbar navbar-expand-lg bg-white container">
           <div class="container">
-            <a class="navbar-brand" href="#"
+            <a class="navbar-brand" :href="links[0].address"
               ><img :src="links[0].logo" alt="master-study-logo"
             /></a>
 
@@ -66,7 +66,7 @@
                   v-for="(link,linkIndex) in links"
                   class="nav-link p-size1"
                   aria-current="page"
-                  href="#"
+                  :href="link.address"
                   >{{link.text}}</a
                 >
               </div>
@@ -77,7 +77,9 @@
                 v-for="social in socials"
                 class="socials d-flex justify-content-between"
               >
-                <a class="nav-link h-contrast-grey p-size1" href="#"
+                <a
+                  class="nav-link h-contrast-grey p-size1"
+                  :href="social.address"
                   ><i :class="social.logo"></i
                 ></a>
               </div>
@@ -111,16 +113,15 @@
               </h3>
               <form class="email-form mb-3" action="">
                 <input
+                  @keyUp.enter="sendEmail()"
+                  v-model="newEmails.text"
                   class="mail-input"
                   type="email"
                   placeholder="Enter your E-mail"
                   required
                 />
-                <button
-                  @click="sendEmail()"
-                  class="button btn-subscribe px-1"
-                  type="button"
-                >
+                <!-- <span>{{newEmails.text}}</span> -->
+                <button class="button btn-subscribe px-1" type="button">
                   SUBSCRIBE
                 </button>
               </form>
@@ -380,6 +381,11 @@
       </section>
       <!-- TEMPLATE BOOK -->
       <section class="template-book">
+        <div class="aside-menu d-flex flex-column p-3">
+          <a v-for="icon in icons" href="#"
+            ><i :class="icon.classe" class="p-size1 mb-3"></i
+          ></a>
+        </div>
         <div class="container">
           <div class="row">
             <div class="col text-center amazon px-5">
@@ -583,13 +589,13 @@
                 StylemixThemes.
               </p>
               <div class="socials d-flex">
-                <a class="nav-link" href="#"
+                <a class="nav-link" :href="socials[2].address"
                   ><i class="ms-2 p-size1" :class="socials[2].logo"></i
                 ></a>
-                <a class="nav-link" href="#"
+                <a class="nav-link" :href="socials[3].address"
                   ><i class="ms-2 p-size1" :class="socials[3].logo"></i
                 ></a>
-                <a class="nav-link" href="#"
+                <a class="nav-link" :href="socials[1].address"
                   ><i class="ms-2 p-size1" :class="socials[1].logo"></i
                 ></a>
               </div>
@@ -600,7 +606,9 @@
               <p class="phone">
                 Tel: +1 212 458 300 32 <br />Fax: +1 212 375 24 14
               </p>
-              <p class="mail"><em>Info@masterstudy.com</em></p>
+              <p class="mail">
+                <a :href="links[0].address"><em>Info@masterstudy.com</em></a>
+              </p>
             </div>
 
             <div class="col-3 pages">
@@ -608,7 +616,9 @@
               <div class="row">
                 <div v-for="(item,itemIndex) in items" class="col-6 d-flex">
                   <ul class="footer-menu">
-                    <li class="menu-item">{{item.text}}</li>
+                    <li class="menu-item">
+                      <a :href="item.address">{{item.text}}</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -617,40 +627,19 @@
             <div class="col-3 blog">
               <h3 class="fw-bold p-size2 my-4">BLOG</h3>
               <div class="row">
-                <div class="col-12">
+                <div v-for="blog in blogs" class="col-12">
                   <div class="row mb-3">
                     <div class="col-4">
                       <div class="img-blog-container">
-                        <img
-                          src="./IMG/photo-1517520287167-4bbf64a00d66-129x129.jpeg"
-                          alt="blog-img-1"
-                        />
+                        <img :src="blog.img" />
                       </div>
                     </div>
                     <div class="col-8">
                       <div class="blog-topic">
-                        <div class="fw-bold p-size1">
-                          Our main target is to "Developing Yourself as a
-                          Leader"
-                        </div>
+                        <a :href="blog.address"
+                          ><div class="fw-bold p-size1">{{blog.title}}</div></a
+                        >
                         <div class="activity p-size05">-August 9, 2018</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="img-blog-container">
-                        <img
-                          src="./IMG/photo-1490376840453-5f616fbebe5b-122x120.jpeg"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-8">
-                      <div class="blog-topic">
-                        <div class="fw-bold p-size1">
-                          Those Other College Expenses You Aren't Thinking About
-                        </div>
-                        <div class="activity p-size05">-June 3, 2015</div>
                       </div>
                     </div>
                   </div>

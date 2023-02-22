@@ -193,9 +193,17 @@ li > a > i {
 /* TEMPLATE BOOK */
 
 .template-book {
+  position: relative;
   background-image: url(../IMG/slider_1-1917x607-1914x606.jpg);
   background-size: cover;
   background-position: center;
+}
+.aside-menu {
+  color: var(--high-contrast-grey);
+  background-color: var(--lower-contrast-grey);
+  position: absolute;
+  right: 0rem;
+  top: 2rem;
 }
 .amazon {
   margin-top: 8rem;
