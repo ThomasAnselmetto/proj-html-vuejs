@@ -289,7 +289,7 @@ li > a > i {
 .courses-card:hover {
   cursor: pointer;
   background-color: var(--master-study-yellow);
-  border: 10px solid var(--basic-white);
+  border: 1px solid var(--basic-white);
 }
 .courses-card:hover > .courses-icons > i {
   color: var(--basic-white);

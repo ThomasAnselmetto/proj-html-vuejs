@@ -4,7 +4,7 @@ const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
 const counter = setInterval(boleanersCountDown, 1000);
-const countDownDate = new Date("Feb 23, 2023 00:00:00").getTime();
+const countDownDate = new Date("Mar 04, 2023 00:00:00").getTime();
 console.log(countDownDate);
 
 let totalSeconds = 0;
@@ -13,7 +13,7 @@ boleanersCountDown();
 function boleanersCountDown() {
   const now = new Date().getTime();
   let gapDiDate = countDownDate - now;
-  console.log(gapDiDate);
+
   ++totalSeconds;
   let days = Math.floor(gapDiDate / (1000 * 60 * 60 * 24));
   daysEl.innerHTML = days < 10 ? "0" + days : days;

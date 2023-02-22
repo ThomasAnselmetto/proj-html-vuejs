@@ -28,7 +28,6 @@ const app = createApp({
           text: "Demos",
           address: "https://vuejs.org/guide/quick-start.html",
         },
-        {},
       ],
       items: [
         {
@@ -117,6 +116,24 @@ const app = createApp({
           funzione: "imposta la visualizzazione mobile",
         },
       ],
+      titles: [
+        {
+          name: "ABOUT",
+          address: "https://mathoverflow.net/",
+        },
+        {
+          name: "CONTACT",
+          address: "https://mathoverflow.net/",
+        },
+        {
+          name: "PAGES",
+          address: "https://mathoverflow.net/",
+        },
+        {
+          name: "BLOG",
+          address: "https://mathoverflow.net/",
+        },
+      ],
       blogs: [
         {
           img: "../IMG/photo-1517520287167-4bbf64a00d66-129x129.jpeg",
@@ -134,23 +151,16 @@ const app = createApp({
 
       emails: [],
 
-      newEmails: {
-        text: "",
-        validation: "true",
-        country: "ita",
-      },
+      newEmails: "",
       activeLink: 0,
     };
   },
 
   methods: {
     sendEmail() {
-      const newObject = {
-        text: this.newEmails.text,
-        validation: this.newEmails.validation,
-        country: this.newEmails.country,
-      };
-      this.emails.push(newObject);
+      newEmails: this.newEmails;
+      this.emails.push(this.newEmails);
+      this.newEmails = "";
     },
   },
 });

@@ -114,15 +114,17 @@
               </h3>
               <form class="email-form mb-3" action="">
                 <input
-                  @keyUp.enter="sendEmail()"
-                  v-model="newEmails.text"
+                  v-model="newEmails"
                   class="mail-input"
                   type="email"
                   placeholder="Enter your E-mail"
-                  required
+                  
+                  
                 />
                 <!-- <span>{{newEmails.text}}</span> -->
-                <button class="button btn-subscribe px-1" type="button">
+                <button 
+                v-on:click="sendEmail()"
+                class="button btn-subscribe px-1" type="submit">
                   SUBSCRIBE
                 </button>
               </form>
@@ -583,7 +585,7 @@
         <div class="container pt-5">
           <div class="row">
             <div class="col-3 about">
-              <h3 class="fw-bold p-size2 my-4">ABOUT</h3>
+              <a :href="titles[0].address"><h3 class="fw-bold p-size2 my-4">{{titles[0].name}}</h3></a>
               <p>
                 Masterstudy is Education WordPress theme featured by Learning
                 Menagement System (LMS) for online education. <br />Developed by
@@ -602,7 +604,7 @@
               </div>
             </div>
             <div class="col-3 contact">
-              <h3 class="fw-bold p-size2 my-4">CONTACT</h3>
+              <a :href="titles[1].address"><h3 class="fw-bold p-size2 my-4">{{titles[1].name}}</h3></a>
               <p class="addres">USA, California 20, First Avenue, California</p>
               <p class="phone">
                 Tel: +1 212 458 300 32 <br />Fax: +1 212 375 24 14
@@ -613,7 +615,7 @@
             </div>
 
             <div class="col-3 pages">
-              <h3 class="fw-bold p-size2 my-4">PAGES</h3>
+              <a :href="titles[2].address"><h3 class="fw-bold p-size2 my-4">{{titles[2].name}}</h3></a>
               <div class="row">
                 <div v-for="(item,itemIndex) in items" class="col-6 d-flex">
                   <ul class="footer-menu">
@@ -626,7 +628,7 @@
             </div>
 
             <div class="col-3 blog">
-              <h3 class="fw-bold p-size2 my-4">BLOG</h3>
+              <a :href="titles[3].address"><h3 class="fw-bold p-size2 my-4">{{titles[3].name}}</h3></a>
               <div class="row">
                 <div v-for="blog in blogs" class="col-12">
                   <div class="row mb-3">
