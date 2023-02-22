@@ -94,8 +94,8 @@ body {
 .jumbotron-title {
   width: 47%;
   position: absolute;
-  top: 12rem;
-  right: 8rem;
+  top: 12.5rem;
+  right: 6rem;
 }
 .jumbotron-input {
   height: 13rem;
@@ -313,12 +313,12 @@ li > a > i {
   font-weight: bold;
 }
 
-.active-link {
-  color: var(--master-study-yellow);
-}
 a:hover {
   color: var(--lower-contrast-grey);
 }
 .aside-menu > a:hover {
   color: var(--master-study-yellow);
+}
+.insight > li > a:hover {
+  color: #0d6efd;
 }
